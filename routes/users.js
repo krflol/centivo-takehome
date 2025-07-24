@@ -3,8 +3,9 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const User = require('../models/user'); // Import the main User model
 
-// Define a model for the view
-const UserOver21 = mongoose.model('UserOver21', new mongoose.Schema({ name: String, age: Number }), 'users_over_21');
+// Define a model for the view. In this case we are treating the application as if over 21 is an imperative of the application.
+//otherwise we would have a separate view for usersOver_21
+const UserOver21 = mongoose.model('UserOver21', new mongoose.Schema({ name: String, email: String, age: Number }), 'users_over_21');
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
@@ -33,10 +34,7 @@ router.get('/:id', async (req, res) => {
 
   } catch (error) {
     console.error(error);
-    response_message = 'Server error: ' + error;
     res.status(500).json({ message: 'Server error' });
-    //Optionally, we could send the error to the client if we wanted to be more verbose
-    //res.status(500).json({ message: response_message });
   }
 });
 
