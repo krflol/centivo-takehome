@@ -1,6 +1,6 @@
 # Centivo API Take-Home Project
 
-This project implements a secure Node.js and Express API that interfaces with a MongoDB database. Our approach focuses on ensuring that only users over the age of 21 can be accessed through the API endpoint. To achieve this, we leverage a MongoDB database view that permanently filters out any users who do not meet the age requirement, treating it as a mission-critical security measure baked into the data access layer. We would have a seperate view for this
+This project implements a Node.js and Express API that interfaces with a MongoDB database. Our approach focuses on ensuring that only users over the age of 21 can be accessed through the API endpoint. To achieve this, we leverage a MongoDB database view that permanently filters out any users who do not meet the age requirement, treating it as a mission-critical security measure baked into the data access layer. We would have a seperate view for this
 if the requirements weren't explicit about the api only returning users over 21.
 
 ## Setup and Configuration
