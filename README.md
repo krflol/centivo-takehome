@@ -5,6 +5,8 @@ if the requirements weren't explicit about the api only returning users over 21.
 
 We handle invalid objects with a check before anything else.
 
+Hope to hear back soon!
+
 ## Setup and Configuration
 
 1.  **Install Dependencies:**
